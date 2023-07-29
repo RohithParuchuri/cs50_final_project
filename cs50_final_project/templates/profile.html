@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title>profile</title>
+{% endblock %}
+
+{% block body %}
+<div class="card text-center">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Statistics <img src="../static/smart_toy_black_24dp.svg" alt=""></h5>
+      <p class="card-text">
+        <ul class="list">
+          <li>You have got {{click}} Points</li> 
+          <li> {{reaction}}</li>
+          <li>In an average time of: {{timesec}}</li>
+          <li> while the best is: {{least_time}}</li>
+          <li><h4>while your best is: {{best}}</h4></li>
+        </ul>
+      </p>
+      <a href="/" class="btn btn-dark">Go to Home</a>
+    </div>
+    <div class="card-footer text-muted">
+      Analysed by Rohith
+    </div>
+  </div>
+    
+
+{% endblock %}
