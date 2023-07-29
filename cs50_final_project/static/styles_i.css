@@ -1,0 +1,86 @@
+body{
+    overflow: scroll;
+}
+button:hover{
+    cursor: none;
+}
+button{
+    position: absolute;
+    
+}
+#reload{
+    position: absolute;
+    cursor: none;
+}
+p, h3{
+    text-align: center;
+    margin-top: 1%;
+}
+#button{
+    position: absolute;
+    text-align: center;
+    margin-left: 25%;
+    width: 50%;
+}
+h1{
+    text-shadow: 1px 1px 3px;
+}
+
+.btn-primary center{
+ background-color: red;
+}
+
+.listdiv{
+    padding: 1%;
+    text-align: center;
+    width: 31%;
+    margin-left: 34.5%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+.list{
+    display: inline-block;
+    text-align: left;
+    list-style-type: '* ';
+    color: gray;
+}
+#alert{
+    color: red;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.btn-dark:hover{
+    transition: all 0.4s;
+    background-color: rgb(46, 46, 46);
+    scale: 105%;
+    border-radius: 2px;
+    border-color: dimgray;
+}
+.navbar-custom{
+    background-color: white;
+    box-shadow: 0.2px 0.2px 10px dimgray;
+    border-radius: 10px;
+}
+
+
+@keyframes congrates {
+    0% {background-color: white}
+    25% {background-color: gray;}
+    100% {background-color: lightgreen;}
+}
+
+.best{
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    height: 100%; 
+    border: 3px solid none;
+    animation: congrates 1000ms ease-in 1ms 1 normal forwards;
+    overflow: hidden;
+}

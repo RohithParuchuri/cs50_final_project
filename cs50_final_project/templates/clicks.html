@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>CLICK</title>
+    <link rel="stylesheet" href="/static/invisible.css">
+    <script src="static/click.js"></script>
+{% endblock %}
+
+
+{% block body %}
+<body onload="clicks('{{i}}%', '{{j}}%', '{{cursor}}%'); upd_timer('{{timegiven}}');modeclick('{{mode}}')">
+
+    <div class="timer" id="timerdiv">
+        <h1 id="timer" class="timert" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></h1>
+    </div>
+    <div class="counter" >
+        <h1 class="counter">{{clicks}}</h1>
+    </div>
+    <form action="/profile" method="post">
+        <button type="submit" class="btn btn-dark" id="home"><img src="../static/insights_white_24dp.svg" alt="">Score</button>
+    </form>
+    
+    <form action="/clicks" method="post">
+        <button class="btn btn-outline-primary" id="reload">Click me! <img src="../static/pan_tool_alt_black_24dp.svg" alt=""></button>
+    </form>
+
+</body>
+{% endblock %}
