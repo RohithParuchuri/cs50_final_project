@@ -16,7 +16,7 @@
           <li> {{reaction}}</li>
           <li>In an average time of: {{timesec}}</li>
           <li> while the best is: {{least_time}}</li>
-          <li><h4>while your best is: {{best}}</h4></li>
+          <li><h4>while your best is: {{best | float | round(2)}}</h4></li>
         </ul>
       </p>
       <a href="/" class="btn btn-dark">Go to Home</a>

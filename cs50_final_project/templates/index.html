@@ -1,103 +1,179 @@
-{% extends "layout.html" %}
-    {% block title %}
-        <title>index</title>
-    {% endblock %}
-
-{% block body %}
-<body id="body" style="overflow: hidden;" id="modeform" onload="mode('{{mode}}')">
+{% extends "layout.html" %} {% block title %}
+<title>index</title>
+{% endblock %} {% block body %}
+<body
+  id="body"
+  style="overflow: hidden"
+  id="modeform"
+  onload="mode('{{mode}}')"
+>
   <form action="/theme" method="get">
-    <input type="text" value="index.html" hidden>
+    <input type="text" value="index.html" hidden />
   </form>
-    <nav class="navbar navbar-expand-lg navbar-custom" id="navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"><img src="../static/home_black_24dp.svg" id="homeicon" width="150%" height="150%" alt="home"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/best">Top scrore</a>
-              </li>
-              <li>
-                <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Select Level
-</button>
-
-<!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"> Select level</h5>
-          The level makes the game harder by reducing repetations
-        </div>
-
-        <div class="modal-body">
-          <form action="/clicks" method="post">
-            <input type="text" value="1" name="click_button" hidden>
-            <button class="btn btn-dark">
-              Beginner <img src="../static/sports_esports_white_24dp.svg" alt="">
-            </button>
-          </form>
-          <br>
-          <br>
-          <form action="/clicks" method="post">
-            <input type="text" value="2" name="click_button" hidden>
-            <button class="btn btn-dark">
-              Intermediate <img src="../static/sports_esports_white_24dp.svg" alt="">
-            </button>
-          </form>
-          <br>
-          <br>
-          <form action="/clicks" method="post">
-            <input type="text" value="3" name="click_button" hidden>
-            <button class="btn btn-dark">
-              Advanced <img src="../static/sports_esports_white_24dp.svg" alt="">
-            </button>
-          </form>
-           <br>
-           
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <ul class="navbar-nav ml-auto">
+  <nav class="navbar navbar-expand-lg navbar-custom" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"
+        ><img
+          src="../static/home_black_24dp.svg"
+          id="homeicon"
+          width="150%"
+          height="150%"
+          alt="home"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link active" aria-current="page" href="/TypeFury"
+              >TypeFury</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/best"
+              >Top scrore</a
+            >
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/theme" onclick="mode('{{mode}}')">
-            <img id="themeicon" src="../static/dark_mode_black_24dp.svg" style="scale: 110%;" alt="dark_mode">
+              <img
+                id="themeicon"
+                src="../static/dark_mode_black_24dp.svg"
+                style="scale: 110%"
+                alt="dark_mode"
+              />
             </a>
-          </li>     
+          </li>
+          <li>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Select Level
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Select Level
+                    </h5>
+                  </div>
+
+                  <div class="modal-body">
+                    <form action="/clicks" method="post">
+                      <input type="text" value="1" name="click_button" hidden />
+                      <button class="btn btn-dark">
+                        Beginner
+                        <img
+                          src="../static/sports_esports_white_24dp.svg"
+                          alt=""
+                        />
+                      </button>
+                    </form>
+                    <br />
+                    <br />
+                    <form action="/clicks" method="post">
+                      <input type="text" value="2" name="click_button" hidden />
+                      <button class="btn btn-dark">
+                        Intermediate
+                        <img
+                          src="../static/sports_esports_white_24dp.svg"
+                          alt=""
+                        />
+                      </button>
+                    </form>
+                    <br />
+                    <br />
+                    <form action="/clicks" method="post">
+                      <input type="text" value="3" name="click_button" hidden />
+                      <button class="btn btn-dark">
+                        Advanced
+                        <img
+                          src="../static/sports_esports_white_24dp.svg"
+                          alt=""
+                        />
+                      </button>
+                    </form>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <br />
         </ul>
-      </nav>
-
-    <h3 style="font-size: xx-large; font-family: 'Nova Square', cursive;" id='clickmetext'>Click The button</h3>
-    <p id="alert">Note: sometimes for the button You have to scroll down</p>
-
-    <form action="/clicks" method="post">
-      <input type="text" value="2" name="click_button" hidden>
-      <button class="btn btn-outline-primary" id="button" onclick="locid('{{i}}%', '{{j}}%', '{{cursor}}')">Start Now <img src="../static/play_arrow_white_24dp.svg" alt=""></button>
-    </form>
-
-    <br><br><br>
-    <div class="listdiv">
-      <img src="../static/rule_black_24dp.svg" alt="Rules">
-      <ul class="list">
-          <li>The Mouse pointer will dissapear once you click Start</li>
-          <li>Find the click me button then click it to get score </li>
-          <li>Game gets progressively harder as you score higher</li>
-          <li>This game is all about consistancy</li>
-          <li>The level makes the game harder by reducing repetations</li>
-      </ul>
-
+      </div>
     </div>
+
+    <!-- <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/theme" onclick="mode('{{mode}}')">
+          <img
+            id="themeicon"
+            src="../static/dark_mode_black_24dp.svg"
+            style="scale: 110%"
+            alt="dark_mode"
+          />
+        </a>
+      </li>
+    </ul> -->
+  </nav>
+
+  <h3
+    style="font-size: xx-large; font-family: 'Nova Square', cursive"
+    id="clickmetext"
+  >
+    Click The button
+  </h3>
+  <p id="alert">Note: sometimes for the button You have to scroll down</p>
+
+  <form action="/clicks" method="post">
+    <input type="text" value="2" name="click_button" hidden />
+    <button
+      class="btn btn-outline-primary"
+      id="button"
+      onclick="locid('{{i}}%', '{{j}}%', '{{cursor}}')"
+    >
+      Start Now <img src="../static/play_arrow_white_24dp.svg" alt="" />
+    </button>
+  </form>
+
+  <br /><br /><br />
+  <div class="listdiv">
+    <img src="../static/rule_black_24dp.svg" alt="Rules" />
+    <ul class="list">
+      <li>The Mouse pointer will dissapear once you click Start</li>
+      <li>Find the click me button then click it to get score</li>
+      <li>Game gets progressively harder as you score higher</li>
+      <li>This game is all about consistancy</li>
+      <li>The level makes the game harder by reducing repetations</li>
+    </ul>
+  </div>
 </body>
 {% endblock %}
