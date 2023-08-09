@@ -8,6 +8,6 @@
 
 {% block body %}
 <div class="best" onclick="route()">
-    <h2 style="scale: 190%">Congrates your best is <strong> {{best}}  </strong>Sec</h2>
+    <h2 style="scale: 190%">Congrates your best is <strong> {{best | float | round(2)}}  </strong>Sec</h2>
 </div>
 {% endblock %}
