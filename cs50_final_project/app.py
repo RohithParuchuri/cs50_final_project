@@ -210,8 +210,8 @@ def changer():
 @app.route("/best")
 def top():
     if session["best"] != "0":
-        best = session["best"]
-    else:
+        best = round(float(session["best"]), 2)
+    elif session["best"] == "0" or session["best"] == 0 :
         best = "Play a Game"
     return render_template("best.html", best=best)
 
